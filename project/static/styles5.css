@@ -1,0 +1,300 @@
+/* style for the education page  */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(10, 0, 0);
+    overflow-x: hidden;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+  }
+ 
+  .intro {
+    background-image: url('ntttt.jpg'); 
+    background-position: center;
+    color: black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    height: 100vh; 
+    padding: 20px;
+    background-attachment: fixed; 
+  }
+  
+  .intro h1 {
+    font-size: 2.2em;
+    margin: -25px 0 0 0;
+  color: #232222; 
+  padding: 20px;
+  background-color: transparent; /* Slightly transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow around the header */
+  max-width: 90%; /* Ensure it doesn't stretch too wide */
+  text-transform: uppercase; 
+  }
+.intro h2{
+   color: rgb(45, 44, 44);
+   font-size: 1.2em;
+   margin-top: 30px;
+   padding: 15px;
+   text-align: center; 
+   max-width: 90%; 
+   margin: 0 auto; 
+  }
+  .intro p {
+    font-size: 1.2em; 
+  margin-top: 20px;
+  color: #0a0000; 
+  text-align: left; 
+  max-width: 80%; 
+  line-height: 1.8;
+  padding: 10px;
+  background-color: transparent; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .phishing {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden; 
+  }
+  
+  .phishing .image-side {
+    flex: 1; 
+    background-image: url(phh.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    width: 100%;
+  }
+  
+  .phishing .content {
+    flex: 1; 
+    padding: 40px;
+    color: #1f1f1f;
+    font-size: 20px;
+    background-color: rgba(166, 208, 245, 0.2); 
+    border-radius: 8px;
+    z-index: 1; 
+  }
+
+  .examples {
+    background-image: url('loc.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    height: 100vh;
+    padding: 20px;
+    background-attachment: fixed; 
+  }
+  .examples h2 {
+    font-size: 2.2em;
+    margin: -25px 0 0 0;
+  color: #232222; 
+  padding: 20px;
+  text-transform: uppercase; 
+  }
+
+  .examples p {
+    font-size: 1.1em; 
+  margin-top: 20px;
+  color: #0a0000; 
+  text-align: left; 
+  max-width: 80%; 
+  line-height: 1.8; 
+  padding: 10px;
+  background-color: transparent; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+  }
+  
+  .content1{
+    
+    background-image: url('spar.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    height: 100vh; 
+    padding: 20px;
+    background-attachment: fixed; 
+  }
+  .content1 h2 {
+    font-size: 1.5em;
+    margin: -25px 0 0 0;
+  color: #232222; 
+  padding: 20px;
+  text-transform: uppercase; 
+  }
+  .content1 p {
+    font-size: 1.1em; 
+  margin-top: 20px;
+  color: #0a0000; 
+  text-align: left; 
+  max-width: 80%; 
+  line-height: 1.8; 
+  padding: 10px;
+  background-color: transparent; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+  }
+  .image-side11 {
+    flex: 1; 
+    background-image: url(paypl.webp); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+  }
+  .image-side22 {
+    flex: 1; 
+    background-image: url(amazon.png); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+  }
+  .sql-injection{
+    background-image: url('sc3.jpg'); 
+  }
+  .sql-injection h2{ 
+    font-size: 2.2em;
+    margin: -25px 0 0 0;
+  color: #f3efef; 
+  padding: 40px;
+  background-color: rgba(1, 28, 55, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+  max-width: 90%; 
+  text-transform: uppercase; 
+}
+
+  .sql-injection p{
+    font-size: 1.1em; 
+    margin-top: 20px;
+    color: #f8f3f3; 
+    text-align: left;
+    max-width: 100%; 
+    line-height: 1.8; 
+    padding: 10px;
+    background-color: rgba(1, 28, 55, 0.9); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(20, 34, 56, 0.4); 
+    width: 80%; 
+    margin: 20px auto; 
+  }
+  .password {
+    background-image: url('pas.jpg'); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+  }
+  .password h2{ 
+    font-size: 2.2em;
+    margin: -25px 0 0 0;
+  color: #f3efef; 
+  padding: 40px;
+  background-color: rgba(1, 28, 55, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+  max-width: 90%; 
+  text-transform: uppercase;
+}
+
+  .password p{
+    font-size: 1.1em; 
+    margin-top: 20px;
+    color: #f8f3f3; 
+    text-align: left; 
+    max-width: 100%; 
+    line-height: 1.8; 
+    padding: 10px;
+    background-color: rgba(1, 28, 55, 0.9); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(20, 34, 56, 0.4); 
+    /* Centering horizontally */
+    width: 80%; 
+    margin: 20px auto; 
+  }
+  
+  .call-to-action {
+    background-image: url('mnm.jpg'); 
+    background-color: rgba(58, 7, 7, 0.5); 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.text-box {
+    display: inline-block; 
+    background-color: rgba(153, 148, 144, 0.9); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
+    text-align: center; 
+}
+
+.text-box h2 {
+    margin: 0 0 15px; 
+    color: #090000; 
+    font-size: 30px;
+}
+
+.text-box button {
+    background-color: #ff7b00; 
+    color: #fff; 
+    font-size: 15px;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); 
+}
+
+.text-box button:hover {
+    background-color: #9cbfe5; 
+}
+
+a {
+    color:#130900; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+  
+  /* Add smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  

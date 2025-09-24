@@ -1,0 +1,25 @@
+<!--This HTML page displays the results of the quiz after you press the submit button. It includes a link to the education page and also contains styling.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <!-- styling of the result page-->
+    <style>
+        body { font-family: Arial, sans-serif; background: #01012f; text-align: center; }
+        .container { margin: 50px auto; padding: 20px; background: rgb(189, 208, 249); width: 80%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h1 { color: #4d6ea2; }
+        a { color: #4d6ea2; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p>You scored {{ score }} out of 5.</p>
+        <!--link to the education page -->
+        <p><a href="{{ url_for('education_page') }}">Back to the education page</a></p>
+    </div>
+</body>
+</html>

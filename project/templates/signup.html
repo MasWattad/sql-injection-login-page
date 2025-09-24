@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Signup form for users to enter their username and password.-->
+   <h1>signup</h1>
+   <form method="POST" action="{{ url_for('signup') }}">
+    <i class='bx bxs-user' ></i><label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <i class='bx bxs-lock-alt' ></i><label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="submit">Sign Up</button>
+   </form>
+
+   <p><strong><i class='bx bxs-check-shield'></i>Tip:</strong> A strong password should include at least 10 characters, one uppercase letter, one lowercase letter, one number, and one symbol.</p>
+    <!--this section is  Password generator with a button to fetch a strong password.-->
+   <div id="password-generator" style="display: flex; justify-content: center; align-items: center; gap: 5px; font-size:20px;">
+    <span>Generate a strong password:</span>
+    <button id="generate-password" onclick="fetchPassword()" style="width: 80px; height: 30px; padding: 0; font-size: 16px;">Generate</button>
+   </div>
+   <p id="generated-password"></p>
+   <!--link to the login page and to the rducation page-->
+   <p><i class='bx bxs-log-in'></i>Already have an account? Log in <a href="{{ url_for('login_page') }}">login here</a></p>
+   <p><i class='bx bxs-book-reader' ></i>Want to learn more? <a href="{{ url_for('education_page') }}">Visit the education page</a></p>
+   
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+     <ul>
+         {% for message in messages %}
+             <li>{{ message }}</li>
+         {% endfor %}
+     </ul>
+   {% endif %}
+   {% endwith %}
+   <script>
+      <!-- JavaScript function to fetch a strong password from the server using the `generate_password` route.-->
+    async function fetchPassword() {
+        const response = await fetch("{{ url_for('generate_password') }}");
+        const password = await response.text();
+        document.getElementById("generated-password").textContent = `Generated Password: ${password}`;
+    }
+   </script>
+</body>
+</html>

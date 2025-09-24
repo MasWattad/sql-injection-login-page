@@ -1,0 +1,38 @@
+<!-- This page allows users to log in by entering their username and password. links to the signup and education pages-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <i class='bx bxs-user'></i><label for="username">Username:</label>
+        <input type="text" id="username" name="username" required> 
+        <br>
+        <i class='bx bxs-lock-alt'></i><label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+     <!-- Link to the signup page -->
+    <p><i class='bx bxs-exit'></i>Don't have an account? <a href="{{ url_for('signup_page') }}">Sign up</a></p>
+     <!-- Link to the education page -->
+    <p><i class='bx bxs-book-reader' ></i>Learn how to protect yourself from phishing and SQL injections  <a href="{{ url_for('education_page') }}">education page</a></p>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>
+

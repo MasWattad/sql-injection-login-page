@@ -1,0 +1,107 @@
+<!-- This page provides educational content about social engineering, SQL injections, and strong password practices. It also includes a link to quiz to test users' knowledge and a link to the login page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Security Education</title>
+  <!--link for the style for the eduction page -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles5.css') }}">
+</head>
+<body>
+<!--educational content-->
+  <section class="intro">
+    <div class="content">
+      <h1>Stay Safe in the Digital World</h1>
+      <h2>Learn how attackers operate and how you can protect yourself.</h2> 
+    </div>
+    <p>In today’s digital age, the internet plays a vital role in our daily lives, from communication and entertainment to browsing and shopping to storing personal information.
+       However, it’s important to recognize that the internet can also be a dangerous place, with numerous risks that threaten our security.
+       To safeguard ourselves, it’s essential to use secure websites and educate ourselves about how to avoid falling victim to scams or malicious attacks.
+       In this context, we’ll examine common cyber threats and explore security measures that can help protect us.
+       These include simple precautions individuals can take to stay safe, as well as crucial security practices that websites should adopt to protect our sensitive data.</p>
+  </section>
+
+  <section class="phishing">
+    <div class="image-side"></div> 
+    <div class="content">
+      <h2>Phishing: Don’t Take the Bait</h2>
+      <p>Phishing is a form of cyberattack where malicious actors impersonate legitimate organizations or individuals to deceive users into revealing sensitive information, 
+        such as login credentials, credit card numbers, or personal details.
+       Phishing is a type of social engineering attack which exploits human psychology, rather than relying solely on technical vulnerabilities.</p>
+    </div>
+  </section>
+
+  <section class="examples">
+    <div class="content">
+      <h2> Examples of phishing attempts</h2>
+      <p>1.Fake email from your bank that will Steal your login credentials and potentially gain access to your funds: the scenario can be that you receive an email that claims to be from your bank,the email will contain the bank logo and information to make the email appear legitimate and convincing.the email might state that you need to urgently change your current password, or it might state that there is suspicious activity detected on your account and will ask you to click a link which will direct you to a fake login page of the bank's website where you will enter you credentials and send them directly to the attacker.<br> 
+         2.getting a fake email from amazon that has a fake invoice for payment. The email will for example state: "Your payment of $499 to amazon has been processed. If this wasn’t you, cancel the transaction here: [link]."the link provided will take you to a malicious website. This site may ask for personal details or install malware on your device. Malware is malicious software attackers use it to disrupt operations, steal sensitive data, or gain unauthorized access to systems.<br>
+         3. Social Media Phishing: Fake profiles or messages on platforms like Facebook or Instagram are used to trick users. You receive a direct message on Instagram or Facebook saying, "Check out this picture of you!" with a link. The link redirects to a fake login page for the social media platform.Entering your credentials gives attackers access to your account.Where they hijack your account to target your friends or spread malware. <br>
+         4.Fake Charity Scams: for example, you would receive a fake email about a recent world crisis or disaster and get this in the email: "Donate now to help earthquake victims: [link]."The link leads to a fraudulent donation page that will steal financial information under the guise of good deed.<br>
+         5.Tech Support Scams: pop-up on your computer claims it’s infected with a virus and urges you to call a number for "technical support.".If you call the scammer, they ask for remote access and payment for fake services which helps them Gain control of your system and extort money.<br>
+         6.Fake Job Offer: you recive a scam email staing the following  "We’ve reviewed your resume and would like to offer you a remote position. Please complete the application form here: [link]."The form collects sensitive information like your ID or bank details.</p>
+    </div>
+  </section>
+  
+   <section class="avoid phishing">
+    <div class="content1">
+      <h2>Common Features of Phishing Emails</h2>
+      <p>1. Unusual Email Address or Domain: The sender’s email might appear legitimate at first glance but contains subtle errors. For instance:Instead of support@example.com, it might be support@examp1e.com (notice the "1"replacing the "l").Legitimate organizations usually use professional domains (e.g., @bank.com), while phishing emails may use generic domains (e.g., @gmail.com or @xyz-support.com).<br>
+         2. Poor Grammar and Spelling: Awkward phrasing, inconsistent capitalization, and spelling mistakes.For example, “Your account has bean suspanded. Click here to restore.”Why It’s Dangerous:Many phishing attempts originate from non-native speakers or automated systems, which often result in errors.Legitimate organizations rarely send emails with noticeable grammatical mistakes.<br>
+         3. Unfamiliar Greeting or Tone: Generic greetings like “Dear Customer,” “Dear User,” or “Dear Sir/Madam” instead of addressing you by name.Overly formal or awkward tone that doesn’t match the sender’s usual style.<br>                                        
+         4. Too Good to Be True Offers: Promises of free money, prizes, or rewards, such as “Congratulations! You’ve won $10,000!” or “Claim your free iPhone now.”These offers exploit human greed or curiosity to lure victims into clicking links or providing personal information.Legitimate organizations rarely give away valuable prizes without a catch. Why It’s Dangerous:Legitimate companies, especially those you have accounts with, typically address you by name.A generic greeting may indicate the sender doesn’t actually know who you are.<br>                                  
+         5.Requests for Personal Information: Emails asking for sensitive information like passwords, Social Security numbers, credit card details, or bank account information.For example, “Please verify your account by providing your password.”Legitimate companies almost never ask for personal or financial information via email.Sharing this information can lead to identity theft or unauthorized access to your accounts.<br>                         
+         6. Mismatch Between Link Text and URL: The text of a link might say www.paypal.com, but hovering over it reveals a different URL, such as www.paypal-secure-login.xyz.<br>                                               
+         7. Sense of Urgency or Fear: Messages that try to panic you into acting quickly, such as:“Your account will be locked in 24 hours unless you verify it.” ,“Suspicious activity detected on your account! Click here to secure it.”</p>
+    </div>
+  </section>
+<section class="image-gallery">
+  <div class="image-side11"></div>
+  <div class="image-side22"></div>
+</section>
+
+  
+  <section class="sql-injection">
+    <div class="content">
+      <h2>SQL Injection: Guard Your Data</h2>
+      <p>SQL Injection is a type of security vulnerability where attackers exploit improperly secured SQL queries to manipulate a database.<br> By injecting malicious SQL code into input fields, attackers can:<br>
+        &nbsp; 1. Access sensitive information (like usernames and passwords).<br>
+        &nbsp; 2. Modify or delete data.<br>
+        &nbsp; 3. Gain administrative control of the database.<br>
+        For example, entering 1' OR '1'='1 in a login form could trick the database into bypassing authentication. other examples are:<br> &nbsp;1.' UNION SELECT username, password FROM admin_table --.<br> &nbsp; 2. ' OR 1=CONVERT(int, @@version) --.<br> &nbsp; 3.' AND (SELECT COUNT(*) FROM users) > 10 --.<br>  &nbsp; 4. John'; DROP TABLE users; -- .<br> To Prevent SQL injections, developers can use Parameterized Queries (Prepared Statements). Parameterized queries separate SQL code from data, preventing user input from being executed as SQL commands. and developers can also Sanitize and Remove or escape special characters that can alter SQL syntax.<br> Best Practices to protect yourself from SQL injection:<br>
+        &nbsp; 1.Avoid entering sensitive data on websites that seem untrustworthy or poorly maintained.<br>
+        &nbsp; 2.Use tools like browser plugins to check website security certificates and practices.  our login page protects against SQL injections.</p>
+    </div>
+  </section>
+
+
+  <section class="password">
+    <div class="content">
+      <h2>Why Strong Passwords Contribute to Secure Systems</h2>
+      <p>Complex Passwords Are Stronger and More Secure: <br><br> 
+        &nbsp; - A password with mixed character types (uppercase, lowercase, numbers, and symbols) significantly increases the total possible combinations, making it &nbsp;&nbsp;exponentially harder to crack.<br><br>   
+        &nbsp;- For example, a10-character password using only lowercase letters has 26 power 10(about 141 trillion) combinations. Adding uppercase, numbers, and &nbsp;&nbsp;symbols increases this to 94power10(about 53 quintillion). This expansion slows brute-force attacks, as hackers must try far more combinations.<br><br>     
+        &nbsp; - Complex passwords also resist dictionary attacks, which rely on common patterns and predictable structures; adding symbols and numbers introduces &nbsp;&nbsp;randomness that such attacks can't anticipate. For instance, P@ssw0rd123! has higher entropy (unpredictability) than password123, making it harder to &nbsp;&nbsp;crack even with advanced algorithms. <br><br>    
+        Advantages of Random Passwords: <br><br>                     
+        &nbsp; - Randomly generated passwords avoid predictable patterns, don't include personal information (like names or birthdays), and ensure uniqueness across &nbsp;&nbsp;accounts, limiting damage if one password is compromised.</p>
+    </div>
+  </section>
+
+  
+  <section class="call-to-action">
+    <div class="content">
+        <div class="text-box">
+            <h2>Take Action Now</h2>
+            <!--link to the quiz page-->
+            <button> <a href="{{ url_for('quizz_page') }}">Start the Quiz</a></a></button>
+               <!--link to the login page-->
+            <br><br>   <a href="{{ url_for('login_page') }}">Back to login</a>
+           
+        </div>  
+    </div>
+</section>
+</body>
+</html>
+
+

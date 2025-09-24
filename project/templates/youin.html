@@ -1,0 +1,28 @@
+<!--This HTML page welcomes logged-in users, has a link to the educational page, and provides a logout option.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Page title -->
+    <title>You Are In!</title>
+    <!--link to css file which is called style3,that has the design-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <main>
+        <!-- Personalized greeting using the logged-in user's username -->
+        <h2>Hello, {{ username }}!</h2>
+        <p>You have successfully logged in. Enjoy exploring the site!</p>
+        <!-- Link to the education page -->
+        <p><i class='bx bxs-book-reader' ></i><a href="{{ url_for('education_page') }}">Learn about Social Engineering and SQL Injection</a></p>
+        <!-- Logout form with a button -->
+        <form method="GET" action="{{ url_for('logout') }}">
+            <button type="submit">Logout</button>
+        </form>
+    </main>
+</body>
+</html>

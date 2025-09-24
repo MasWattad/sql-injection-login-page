@@ -1,0 +1,73 @@
+/* this style is for the quiz */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #434363;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Centering the content */
+
+h1 {
+    text-align: center;
+    color: #00010c;
+    margin-top: 20px;
+}
+
+
+form {
+    width: 50%;
+    margin: 30px auto;
+    background-color: #c2cef5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+div {
+    margin-bottom: 15px;
+}
+
+/* Styling each question */
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Styling the radio buttons */
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Styling the labels */
+
+label {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Button styling */
+
+button {
+    background-color: #04093b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #84aac0;
+}
+
+

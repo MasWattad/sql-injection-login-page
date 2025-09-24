@@ -1,0 +1,78 @@
+<!-- quiz html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Awareness Quiz</title>
+    <!--link to the style file for the quiz-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleq.css') }}">
+</head>
+<body>
+    <!-- quiz questions with multiple-choice options-->
+    <h1>Security Awareness Quiz</h1>
+    <form action="/submit" method="POST">
+        <div>
+            <p>1. Which of the following is the strongest password?</p>
+            <input type="radio" id="q1a" name="q1" value="a">
+            <label for="q1a">123456</label><br>
+            <input type="radio" id="q1b" name="q1" value="b">
+            <label for="q1b">P@ssw0rd123!</label><br>
+            <input type="radio" id="q1c" name="q1" value="c">
+            <label for="q1c">password</label><br>
+            <input type="radio" id="q1d" name="q1" value="d">
+            <label for="q1d">abc123</label>
+        </div>
+        
+        <div>
+            <p>2. Which of the following is NOT an example of a phishing attempt?</p>
+            <input type="radio" id="q2a" name="q2" value="a">
+            <label for="q2a">Receiving an email from your bank asking you to log in via a provided link.</label><br>
+            <input type="radio" id="q2b" name="q2" value="b">
+            <label for="q2b">A pop-up warning about a virus, urging you to call technical support.</label><br>
+            <input type="radio" id="q2c" name="q2" value="c">
+            <label for="q2c">Receiving a text from your mobile provider asking for your password.</label><br>
+            <input type="radio" id="q2d" name="q2" value="d">
+            <label for="q2d">Visiting a secure HTTPS website to make an online purchase.</label>
+        </div>
+
+        <div>
+            <p>3. What is the purpose of using parameterized queries (prepared statements) in SQL?</p>
+            <input type="radio" id="q3a" name="q3" value="a">
+            <label for="q3a">To make SQL queries execute faster</label><br>
+            <input type="radio" id="q3b" name="q3" value="b">
+            <label for="q3b">To enhance database performance during high loads</label><br>
+            <input type="radio" id="q3c" name="q3" value="c">
+            <label for="q3c">To prevent SQL injections by separating SQL code from user input</label><br>
+            <input type="radio" id="q3d" name="q3" value="d">
+            <label for="q3d">To allow users to write SQL commands directly</label>
+        </div>
+
+        <div>
+            <p>4. What is a safe practice for managing multiple online accounts?</p>
+            <input type="radio" id="q4a" name="q4" value="a">
+            <label for="q4a">Use a password manager to store and generate unique passwords for each account</label><br>
+            <input type="radio" id="q4b" name="q4" value="b">
+            <label for="q4b">Use variations of a single password for all accounts</label><br>
+            <input type="radio" id="q4c" name="q4" value="c">
+            <label for="q4c">Keep all login credentials saved in a text file on your desktop</label><br>
+            <input type="radio" id="q4d" name="q4" value="d">
+            <label for="q4d">Memorize all passwords and avoid writing them down anywhere</label>
+        </div>
+
+        <div>
+            <p>5. If you receive an email asking for sensitive information, what should you do?</p>
+            <input type="radio" id="q5a" name="q5" value="a">
+            <label for="q5a">Reply immediately to confirm your details</label><br>
+            <input type="radio" id="q5b" name="q5" value="b">
+            <label for="q5b">Click on the provided link to verify its legitimacy</label><br>
+            <input type="radio" id="q5c" name="q5" value="c">
+            <label for="q5c">Contact the official organization directly using their verified contact information</label><br>
+            <input type="radio" id="q5d" name="q5" value="d">
+            <label for="q5d">Forward the email to friends for advice</label>
+        </div>
+      <!--Submission button that redirects to the results page-->
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>
