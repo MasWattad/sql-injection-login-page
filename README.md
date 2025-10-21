@@ -66,9 +66,9 @@ This project is a **secure and user-friendly login system** built with Python (F
 
 ## How to Open and Set Up the Project
 
-- ** Extract the zipped project file and save it in the Ubuntu folder. Open the project in Visual Studio Code and ensure it is connected to WSL.
-- ** Open your terminal and install Python 3.13.0 on your laptop using the commands: `sudo apt update` and `sudo apt install python3.13`. 
-- ** Then, install the required libraries by running: `pip install flask bcrypt flask-wtf flask-sqlalchemy`. 
-- ** Make sure SQLite is installed by running: `sudo apt install sqlite3`. 
-- ** Finally, start the Flask development server by typing: `python3 app.py`.
-- ** The terminal will display a local URL (e.g., http://127.0.0.1:5000). Open this URL in your web browser to access the application.
+-  Extract the zipped project file and save it in the Ubuntu folder. Open the project in Visual Studio Code and ensure it is connected to WSL.
+-  Open your terminal and install Python 3.13.0 on your laptop using the commands: `sudo apt update` and `sudo apt install python3.13`. 
+-  Then, install the required libraries by running: `pip install flask bcrypt flask-wtf flask-sqlalchemy`. 
+-  Make sure SQLite is installed by running: `sudo apt install sqlite3`. 
+-  Finally, start the Flask development server by typing: `python3 app.py`.
+-  The terminal will display a local URL (e.g., http://127.0.0.1:5000). Open this URL in your web browser to access the application.
