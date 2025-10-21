@@ -5,7 +5,7 @@
 This project is a **secure and user-friendly login system** built with Python (Flask) that protects against SQL injection attacks and includes strong password policies and encryption. Beyond technical functionality, it features an **educational page and quiz** to raise awareness about cybersecurity best practices, such as recognizing phishing attempts, creating strong passwords, and understanding social engineering.
 
 ---
-![Login Page](Picture 1.png)
+!(Picture 1.png)
 ##  Project Goals
 
 - Develop a secure login and signup system
