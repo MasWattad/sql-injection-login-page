@@ -72,3 +72,13 @@ This project is a **secure and user-friendly login system** built with Python (F
 -  Make sure SQLite is installed by running: `sudo apt install sqlite3`. 
 -  Finally, start the Flask development server by typing: `python3 app.py`.
 -  The terminal will display a local URL (e.g., http://127.0.0.1:5000). Open this URL in your web browser to access the application.
+
+
+
+![](Picture2.png)
+![](Picture3.png)
+![](Picture4.png)
+![](Picture5.png)
+![](Picture6.png)
+![](Picture7.png)
+
